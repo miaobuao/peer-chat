@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+. "${0%/*}/h"
+
+if [ $SHELL = "/usr/bin/fish" ]; then
+  fish -c "pnpm run lint-staged"
+else
+  pnpm run lint-staged
+fi
